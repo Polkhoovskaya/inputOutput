@@ -1,0 +1,10 @@
+<!-- таким образом передаются данные в компоненту ниже -->
+<app-header [authorized]="authorized"></app-header>
+<!-- таким образом передаются методы в компоненту ниже -->
+<app-button (openForm)="onOpenForm()"></app-button>
+<app-form
+  [authorized]="authorized"
+  (getAuthorization)="onGetAuthorization($event)"
+  [formOpend]="formOpend"
+  (onCloseForm)="onCloseForm()"
+></app-form>
